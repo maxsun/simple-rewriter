@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "web-tree-sitter": "^0.20.5"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.39",
+    "tree-sitter-cli": "^0.20.6",
+    "tree-sitter-javascript": "^0.19.0"
+  },
+  "scripts": {
+    "generate": "cd ./parser && tree-sitter generate --no-bindings",
+    "build-wasm": "cd ./parser && tree-sitter build-wasm .",
+    "build": "cd ./parser && tree-sitter generate --no-bindings && tree-sitter build-wasm .",
+    "test": "cd ./parser && tree-sitter test"
+  },
+  "main": "bindings/node"
+}

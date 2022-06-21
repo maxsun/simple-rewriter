@@ -1,0 +1,91 @@
+==================
+Block Statement
+==================
+
+{
+    a;
+    b;
+}
+
+---
+
+(source_file
+  (block_expression
+      (identifier)
+      (identifier)
+    ))
+
+==================
+If Stmt 
+==================
+
+if {
+    a;
+    b;
+}
+
+---
+
+(source_file
+  (if_stmt
+  (block_expression
+    (identifier)
+    (identifier))
+  ))
+
+==================
+While Stmt 
+==================
+
+while {
+    a;
+    b;
+}
+
+---
+
+(source_file
+  (while_stmt
+  (block_expression
+    (identifier)
+    (identifier))
+  ))
+
+==================
+Field Update 
+==================
+
+a.f = v
+
+---
+
+(source_file
+  (field_update
+    (field_lookup
+      (identifier)
+      (identifier))
+    (identifier)))
+
+==================
+Allocate 
+==================
+
+new v
+
+---
+
+(source_file
+  (allocate_expression
+    (identifier)))
+
+==================
+Deallocate 
+==================
+
+dispose v
+
+---
+
+(source_file
+  (deallocate_expression
+    (identifier)))

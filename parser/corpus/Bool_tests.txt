@@ -1,0 +1,63 @@
+==================
+Boolean Literal
+==================
+
+True
+
+---
+
+(source_file
+  (bool_literal))
+
+==================
+Boolean Unary Op (Not)
+==================
+
+!True
+
+---
+
+(source_file
+  (bool_unary_expression
+    (bool_literal)))
+
+==================
+Boolean Binary Op (And)
+==================
+
+True & True
+
+---
+
+(source_file
+  (bool_binary_expression
+    (bool_literal)
+    (bool_literal)))
+
+==================
+Boolean Binary Op (Or)
+==================
+
+True | False
+
+---
+
+(source_file
+  (bool_binary_expression
+    (bool_literal)
+    (bool_literal)))
+
+==================
+Boolean Binary Op (Equals)
+==================
+
+a.f == 10
+
+---
+
+(source_file
+  (bool_binary_expression
+    (field_lookup
+      (identifier)
+      (identifier))
+    (num_literal)))

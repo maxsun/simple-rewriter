@@ -1,0 +1,42 @@
+==================
+Emp Assertion
+==================
+
+emp
+
+---
+
+(source_file
+  (emp))
+
+==================
+Singleton Heap Assertion 
+==================
+
+e -> v
+
+---
+
+(source_file
+  (singleton_heap
+    (identifier)
+    (identifier)
+  ))
+
+==================
+Binary Assertion 
+==================
+
+p -> y * q -> y
+
+---
+
+(source_file
+(binary_assertion
+  (singleton_heap
+    (identifier)
+    (identifier))
+  (singleton_heap
+    (identifier)
+    (identifier))))
+

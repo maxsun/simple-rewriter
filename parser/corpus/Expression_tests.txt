@@ -1,0 +1,66 @@
+==================
+Number Literals 1
+==================
+
+1337
+
+---
+
+(source_file
+  (num_literal))
+
+==================
+Paren Expression
+==================
+
+(a + b)
+
+---
+
+(source_file
+  (paren_expression
+    (binary_expression
+      (identifier)
+      (identifier)
+    )))
+
+==================
+Field Lookup
+==================
+
+x.f
+
+---
+
+(source_file
+  (field_lookup
+      (identifier)
+      (identifier)
+    ))
+
+==================
+Metavar
+==================
+
+$a
+
+---
+
+(source_file
+  (metavar))
+
+
+==================
+Metavar-Update
+==================
+
+$a = 1
+
+---
+
+(source_file
+  (field_update
+    (metavar)
+    (num_literal)
+  ))
+
